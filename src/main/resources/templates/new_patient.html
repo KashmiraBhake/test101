@@ -6,10 +6,10 @@
 
 <body>
         <h2> Fill this form: </h2>
-        <form action="/create_new_patient" method="get">
-                First Name : <br><input type="text" name="name" /><br><br>
-                Last Name : <br><input type="text" name="text" /><br><br>
-                Age : <br><input type="text" name="text" /><br><br>
+        <form action="create_new_patient" method="post">
+                First Name : <br><input type="text" name="fname" /><br><br>
+                Last Name : <br><input type="text" name="lname" /><br><br>
+                Age : <br><input type="text" name="age" /><br><br>
                 Gender : <br>
                 Male <input type="radio" id="male" name="gender" value="male">
 
@@ -17,8 +17,8 @@
                 Other <input type="radio" id="other" name="gender" value="other">
                 <br><br>
 
-                City : <br><input type="text" name="name" /><br><br>
-                Pincode : <br><input type="text" name="text" /><br><br><br>
+                City : <br><input type="text" name="city" /><br><br>
+                Pincode : <br><input type="text" name="pin" /><br><br><br>
 
                 <button type="submit">Submit</button>
 

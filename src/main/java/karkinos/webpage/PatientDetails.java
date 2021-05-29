@@ -26,10 +26,23 @@ public class PatientDetails {
         return modelAndView;
     }
 
-    @RequestMapping("/create_new_patient")
-    public ModelAndView create_new_patient() {
+    @RequestMapping(path="/create_new_patient",method=RequestMethod.POST)
+    public ModelAndView create_new_patient(
+        @RequestParam String fname,
+        @RequestParam String lname,
+        @RequestParam Integer age,
+        @RequestParam String gender,
+        @RequestParam String city,
+        @RequestParam Integer pin) {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("submit");
+        modelAndView.addObject("fname", fname);
+        modelAndView.addObject("lname", lname);
+        modelAndView.addObject("age", age);
+        modelAndView.addObject("gender", gender);
+        modelAndView.addObject("city", city);
+        modelAndView.addObject("pin", pin);
+
 
         return modelAndView;
     }
